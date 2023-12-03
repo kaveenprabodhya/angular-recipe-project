@@ -3,18 +3,18 @@
     <div class="row">
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ recipeEl.name }}</h5>
+          <h5 class="card-title">{{ recipe.name }}</h5>
           <p class="card-text">
-            {{ recipeEl.descrition }}
+            {{ recipe.descrition }}
           </p>
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-end pe-3 align-self-center">
         <img
-          [src]="recipeEl.imagePath"
+          [src]="recipe.imagePath"
           class="img-fluid img-thumbnail"
           style="width: 150px; height: 100px"
-          [alt]="recipeEl.name"
+          [alt]="recipe.name"
         />
       </div>
     </div>
