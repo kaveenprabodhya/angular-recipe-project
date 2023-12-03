@@ -1,1 +1,22 @@
-<p>recipe-item works!</p>
+<a href="#" class="list-group-item w-75" (click)="onSelected()">
+  <div class="card mb-3">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ recipeEl.name }}</h5>
+          <p class="card-text">
+            {{ recipeEl.descrition }}
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-end pe-3 align-self-center">
+        <img
+          [src]="recipeEl.imagePath"
+          class="img-fluid img-thumbnail"
+          style="width: 150px; height: 100px"
+          [alt]="recipeEl.name"
+        />
+      </div>
+    </div>
+  </div>
+</a>
