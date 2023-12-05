@@ -18,13 +18,16 @@
           <a
             class="nav-link"
             aria-current="page"
-            href="#"
-            (click)="onSelect('recipe')"
+            routerLinkActive="active"
+            routerLink="/recipes"
             >Recipes</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onSelect('shopping-list')"
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/shopping-list"
             >Shopping List</a
           >
         </li>
@@ -45,8 +48,12 @@
           class="dropdown-menu dropdown-menu-end"
           aria-labelledby="navbarDropdownMenuLink"
         >
-          <li><a class="dropdown-item" href="#">Save Data</a></li>
-          <li><a class="dropdown-item" href="#">Fetch Data</a></li>
+          <li>
+            <a class="dropdown-item" style="cursor: pointer">Save Data</a>
+          </li>
+          <li>
+            <a class="dropdown-item" style="cursor: pointer">Fetch Data</a>
+          </li>
         </ul>
       </div>
     </div>
