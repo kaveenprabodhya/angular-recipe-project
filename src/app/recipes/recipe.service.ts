@@ -7,18 +7,18 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class RecipeService {
   private recipes: Recipe[] = [
-    new Recipe(
-      'Chips recipe',
-      'a dummy decription',
-      'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/09/23/0/FNK_Skillet-Chicken-Thighs_H1_s4x3.jpg.rend.hgtvcom.616.462.suffix/1632420651769.jpeg',
-      [new Ingredient('Tomatto', 6), new Ingredient('Apples', 10)]
-    ),
-    new Recipe(
-      'Garlic Bread recipe',
-      'Loream ipsum',
-      'https://cdn.broadsheet.com.au/cache/10/30/1030bc60f9023eddcaf9e4686ada3ff5.jpg',
-      [new Ingredient('Tomatto', 6)]
-    ),
+    // new Recipe(
+    //   'Chips recipe',
+    //   'a dummy decription',
+    //   'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/09/23/0/FNK_Skillet-Chicken-Thighs_H1_s4x3.jpg.rend.hgtvcom.616.462.suffix/1632420651769.jpeg',
+    //   [new Ingredient('Tomatto', 6), new Ingredient('Apples', 10)]
+    // ),
+    // new Recipe(
+    //   'Garlic Bread recipe',
+    //   'Loream ipsum',
+    //   'https://cdn.broadsheet.com.au/cache/10/30/1030bc60f9023eddcaf9e4686ada3ff5.jpg',
+    //   [new Ingredient('Tomatto', 6)]
+    // ),
   ];
   recipesChanged = new Subject<Recipe[]>();
 
@@ -48,6 +48,11 @@ export class RecipeService {
 
   deleteRecipe(index: number) {
     this.recipes.splice(index, 1);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
     this.recipesChanged.next(this.recipes.slice());
   }
 }

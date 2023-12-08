@@ -49,10 +49,20 @@
           aria-labelledby="navbarDropdownMenuLink"
         >
           <li>
-            <a class="dropdown-item" style="cursor: pointer">Save Data</a>
+            <a
+              class="dropdown-item"
+              style="cursor: pointer"
+              (click)="onSaveDate()"
+              >Save Data</a
+            >
           </li>
           <li>
-            <a class="dropdown-item" style="cursor: pointer">Fetch Data</a>
+            <a
+              class="dropdown-item"
+              style="cursor: pointer"
+              (click)="onFetchData()"
+              >Fetch Data</a
+            >
           </li>
         </ul>
       </div>

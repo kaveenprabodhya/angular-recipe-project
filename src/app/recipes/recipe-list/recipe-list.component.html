@@ -11,5 +11,11 @@
       [recipe]="recipeEl"
       [index]="i"
     ></app-recipe-item>
+    <div
+      *ngIf="recipes.length < 1"
+      class="my-5 d-flex flex-column justify-content-start"
+    >
+      <h3 class="text-center">No recipe found.</h3>
+    </div>
   </div>
 </div>
